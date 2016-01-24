@@ -19,5 +19,14 @@ class Bod{
     public function vzdalenostOdBodu($druhy){
         return sqrt( pow(($druhy->x - $this->x),2) + pow(($druhy->y - $this->y),2) );
     }
+    
+    public function posun($px,$py){
+        
+        $this->x = $this->x + $px;
+        $this->y = $this->y + $py;
+        
+        return $this;
+        
+    }
 }
 ?>
