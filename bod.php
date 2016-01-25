@@ -21,12 +21,10 @@ class Bod{
     }
     
     public function posun($px,$py){
-        
         $this->x = $this->x + $px;
         $this->y = $this->y + $py;
         
         return $this;
-        
     }
 }
 ?>
