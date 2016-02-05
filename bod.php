@@ -8,8 +8,8 @@ class Bod{
         $this->y=$y;
     }
     
-    public function vypisSouradnice(){
-        echo "[$this->x,$this->y]";
+    public function __tostring(){
+        return("[$this->x,$this->y]");
     }
     
     public function vzdalenostOdNuly(){
