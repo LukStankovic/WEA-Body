@@ -1,8 +1,8 @@
 <?php 
 require_once("bod.php");
-$prvni = new Bod(1,1);
-$druhy = new Bod(3,2);
-$treti = new Bod(5,10);
+$prvni = new Bod("A",1,1);
+$druhy = new Bod("B",3,2);
+$treti = new Bod("C",5,10);
 ?>
 <html lang="cs">
     <head>
@@ -14,9 +14,9 @@ $treti = new Bod(5,10);
 <h1>Práce s body</h1>
     <ul>
         <li>Vzdálenost bodu A[1,1] od nuly: <?php echo number_format($prvni->vzdalenostOdNuly(),4); ?></li>
-        <li>Vzdálenost 2 bodů A<?php echo $prvni; ?> a B<?php echo $druhy; ?>: 
+        <li>Vzdálenost 2 bodů <?php echo $prvni; ?> a <?php echo $druhy; ?>: 
         <?php echo number_format($prvni->vzdalenostOdBodu($druhy),4); ?></li>
-        <li>Posun bodu C<?php echo $treti; ?> o px=3, py=8: C
+        <li>Posun bodu <?php echo $treti; ?> o px=3, py=8: C
         <?php $treti->posun(3,8); ?>
         <?php echo $treti; ?>
         </li>
