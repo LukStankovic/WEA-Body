@@ -19,6 +19,12 @@ class Bod3D extends Bod{
         return sqrt( pow(($druhy->x - $this->x),2) + pow(($druhy->y - $this->y),2) + pow(($druhy->z - $this->z),2) );
     }
     
-
+    public function posun($px,$py,$pz){
+        $this->x = $this->x + $px;
+        $this->y = $this->y + $py;
+        $this->z = $this->z + $py;
+        
+        return $this;
+    }
 }
 ?>
