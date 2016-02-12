@@ -25,9 +25,14 @@ $treti = new Bod("C",5,10);
     </ul>
 <hr>
     <h2>3D</h2>
-    <?php $prvni_3d = new Bod3D("A",1,2,3); ?>
+    <?php 
+        $prvni_3d = new Bod3D("A",1,2,3);
+        $druhy_3d = new bod3D("B",3,4,5);
+    ?>
     <ul>
         <li>Výpis 3D bodu - <?php echo $prvni_3d; ?></li>
+        <li>Vzdzálenost od počátku - <?php echo number_format($prvni_3d->vzdalenostOdNuly(),4); ?></li>
+        <li>Vzdálenost od bodu <?php echo $druhy_3d;?> - <?php echo number_format($prvni_3d->vzdalenostOdBodu($druhy)); ?></li>
     </ul>
 </body>
 </html>
