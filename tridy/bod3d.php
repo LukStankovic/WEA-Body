@@ -9,5 +9,8 @@ class Bod3D extends Bod{
     public function __tostring(){
         return "$this->oznaceni[$this->x; $this->y; $this->z]";
     }
+    public function vzdalenostOdNuly(){
+        return sqrt( pow((0-$this->x),2) + pow((0-$this->y),2) + pow((0-$this->z),2) );
+    }
 }
 ?>
