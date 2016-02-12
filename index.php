@@ -34,8 +34,10 @@ $treti = new Bod("C",5,10);
         <li>Vzdzálenost od počátku - <?php echo number_format($prvni_3d->vzdalenostOdNuly(),4); ?></li>
         <li>Vzdálenost od bodu <?php echo $druhy_3d;?> - <?php echo number_format($prvni_3d->vzdalenostOdBodu($druhy)); ?></li>
         <li>Posun bodu <?php echo $prvni_3d;?> o 3: 
-        <?php $prvni_3d->posun(3,3,3); ?>
-        <?php echo $prvni_3d; ?>
+        <?php 
+            $prvni_3d->posun(3,3,3);
+            echo $prvni_3d; 
+        ?>
         </li>
     </ul>
 </body>
