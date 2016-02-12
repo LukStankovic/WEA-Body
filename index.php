@@ -1,5 +1,6 @@
 <?php 
-require_once("bod.php");
+require_once("tridy/bod.php");
+require_once("tridy/bod3d.php");
 $prvni = new Bod("A",1,1);
 $druhy = new Bod("B",3,2);
 $treti = new Bod("C",5,10);
@@ -12,14 +13,21 @@ $treti = new Bod("C",5,10);
     </head>
 <body>
 <h1>Práce s body</h1>
+   <h2>2D</h2>
     <ul>
-        <li>Vzdálenost bodu A[1,1] od nuly: <?php echo number_format($prvni->vzdalenostOdNuly(),4); ?></li>
+        <li>Vzdálenost bodu <?php echo $prvni; ?> od nuly: <?php echo number_format($prvni->vzdalenostOdNuly(),4); ?></li>
         <li>Vzdálenost 2 bodů <?php echo $prvni; ?> a <?php echo $druhy; ?>: 
         <?php echo number_format($prvni->vzdalenostOdBodu($druhy),4); ?></li>
         <li>Posun bodu <?php echo $treti; ?> o px=3, py=8: C
         <?php $treti->posun(3,8); ?>
         <?php echo $treti; ?>
         </li>
+    </ul>
+<hr>
+    <h2>3D</h2>
+    <?php $prvni_3d = new Bod3D("A",1,2,3); ?>
+    <ul>
+        <li>Výpis 3D bodu - <?php echo $prvni_3d; ?></li>
     </ul>
 </body>
 </html>

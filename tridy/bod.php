@@ -1,8 +1,8 @@
 <?php 
 class Bod{
-    private $oznaceni;
-    private $x;
-    private $y;
+    protected $oznaceni;
+    protected $x;
+    protected $y;
     
     public function __construct($oznaceni,$x,$y){
         $this->oznaceni=$oznaceni;
@@ -11,7 +11,7 @@ class Bod{
     }
     
     public function __tostring(){
-        return("$this->oznaceni[$this->x,$this->y]");
+        return("$this->oznaceni[$this->x; $this->y]");
     }
     
     public function vzdalenostOdNuly(){
